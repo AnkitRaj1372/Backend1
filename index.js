@@ -5,6 +5,12 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+let data = {
+  "name": "Ankit",
+  "last": "Raj",
+  "mobile": "8092105162"
+}
+
 app.get('/',(req,res)=>{
   res.send('Hello Ankit!');
 })
@@ -14,7 +20,7 @@ app.get('/twitter',(req,res)=>{
 })
 
 app.get('/login',(req,res)=>{
-  res.send('<h1>Ankit</h1>')
+  res.json(data)
 })
 
 app.get('/time',(req,res)=>{
